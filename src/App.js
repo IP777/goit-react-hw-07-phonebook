@@ -1,20 +1,34 @@
-import React from "react";
+import React, { Component } from "react";
+import { connect } from "react-redux";
 //---------------------------------------
+import * as contactOperation from "./redux/contactOperation";
 import ContactsContainer from "./components/contact/ContactsContainer";
 import ContactFormContainer from "./components/contactForm/ContactFormContainer";
 import PhonebookTitle from "./components/phonebookTitle/PhonebookTitle";
 import SearchFormContainer from "./components/searchForm/SearchFormContainer";
 
-const App = () => (
-	<>
-		<PhonebookTitle name="Phonebook" />
+class App extends Component {
+	componentDidMount = () => {
+		this.props.fetchContacts();
+	};
 
-		<ContactFormContainer />
+	render() {
+		return (
+			<>
+				<PhonebookTitle name="Phonebook" />
 
-		<SearchFormContainer />
+				<ContactFormContainer />
 
-		<ContactsContainer />
-	</>
-);
+				<SearchFormContainer />
 
-export default App;
+				<ContactsContainer />
+			</>
+		);
+	}
+}
+
+const mapDispatchToProps = {
+	fetchContacts: contactOperation.fetchOperation,
+};
+
+export default connect(null, mapDispatchToProps)(App);

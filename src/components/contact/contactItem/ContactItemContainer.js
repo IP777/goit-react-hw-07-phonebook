@@ -1,9 +1,9 @@
 import { connect } from "react-redux";
-import * as contactActions from "./../../../redux/contactActions";
+import * as contactOperation from "../../../redux/contactOperation";
 import ContactItem from "./ContactItem";
 
-const mapDispatchToProps = (dispatch) => ({
-	onRemoveContact: (id) => dispatch(contactActions.removeContact(id)),
-});
+const mapDispatchToProps = {
+	onRemoveContact: contactOperation.deleteOperation,
+};
 
 export default connect(null, mapDispatchToProps)(ContactItem);

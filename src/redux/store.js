@@ -1,15 +1,15 @@
-import { compose, createStore } from "redux";
-import { devToolsEnhancer } from "redux-devtools-extension";
+import { createStore, applyMiddleware } from "redux";
+import { composeWithDevTools } from "redux-devtools-extension";
 import { rootReducer } from "./contactReducer";
-import persistState from "redux-localstorage";
+//import logger from "./middleware/logger";
+import thunk from "./middleware/thunk";
 //https://www.npmjs.com/package/redux-localstorage#configslicer
 //https://www.npmjs.com/package/redux-persist
 
-const enhancer = compose(devToolsEnhancer(), persistState());
+//const enhancer = compose(devToolsEnhancer(), persistState());
+const middleware = [thunk];
+const enhancer = applyMiddleware(...middleware);
 
-//1шаг Создание хранилища
-//Enhancer - подключения к firefox/chrome-redux
-const store = createStore(rootReducer, enhancer);
+const store = createStore(rootReducer, composeWithDevTools(enhancer));
 
 export default store;
-
