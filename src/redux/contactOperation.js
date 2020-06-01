@@ -7,6 +7,7 @@ import {
 	deleteContactSuccess,
 	deleteContactError,
 	addContactObject,
+	contactError,
 } from "./contactActions";
 
 export const fetchOperation = () => (dispatch) => {
@@ -51,4 +52,8 @@ export const deleteOperation = (id) => (dispatch) => {
 		.catch((error) => {
 			dispatch(deleteContactError(error));
 		});
+};
+
+export const catchError = (error) => (dispatch) => {
+	dispatch(contactError(error));
 };

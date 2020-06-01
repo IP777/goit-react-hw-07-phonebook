@@ -45,6 +45,7 @@ const errorReducer = (state = null, { type, payload }) => {
 			return null;
 		case Type.FETCH_POSTS_ERROR:
 		case Type.REMOVE_CONTACT_ERROR:
+		case Type.ERROR_CONTACT:
 			return payload.error;
 		default:
 			return state;

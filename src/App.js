@@ -6,6 +6,7 @@ import ContactsContainer from "./components/contact/ContactsContainer";
 import ContactFormContainer from "./components/contactForm/ContactFormContainer";
 import PhonebookTitle from "./components/phonebookTitle/PhonebookTitle";
 import SearchFormContainer from "./components/searchForm/SearchFormContainer";
+import AlertWindowContainer from "./components/alertWindow/AlertWindowContainer";
 
 class App extends Component {
 	componentDidMount = () => {
@@ -22,6 +23,8 @@ class App extends Component {
 				<SearchFormContainer />
 
 				<ContactsContainer />
+
+				<AlertWindowContainer />
 			</>
 		);
 	}

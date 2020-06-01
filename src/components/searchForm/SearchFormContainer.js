@@ -1,10 +1,11 @@
 import { connect } from "react-redux";
 import * as contactActions from "./../../redux/contactActions";
 import SearchForm from "./SearchForm";
+import * as contactSelector from "../../redux/contactSelector";
 
 const mapStateToProps = (state) => ({
-	contacts: state.contacts,
-	filter: state.filter,
+	contacts: contactSelector.getContact(state),
+	filter: contactSelector.getFilter(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({

@@ -41,3 +41,8 @@ export const addFilter = (string) => ({
 	type: Type.ADD_FILTER,
 	payload: string,
 });
+
+export const contactError = (error) => ({
+	type: Type.ERROR_CONTACT,
+	payload: { error },
+});

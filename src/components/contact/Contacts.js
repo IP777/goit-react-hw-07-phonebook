@@ -5,17 +5,9 @@ import style from "./Contacts.module.css";
 import slideTransition from "./../transition/slide.module.css";
 import ContactItemContainer from "./contactItem/ContactItemContainer";
 
-//Вспомогательная функция для фильтрации контактов
-//->возвращает отфильтрованый массив
-const filterContacts = (contacts, filter) => {
-	return contacts.filter((contact) =>
-		contact.name.toLowerCase().includes(filter.toLowerCase())
-	);
-};
-
-const Contacts = ({ contacts, filter }) => (
+const Contacts = ({ filteredContact }) => (
 	<TransitionGroup component="ul" className={style.list}>
-		{filterContacts(contacts, filter).map(({ id, name, number }) => (
+		{filteredContact.map(({ id, name, number }) => (
 			<CSSTransition
 				key={id}
 				timeout={250}

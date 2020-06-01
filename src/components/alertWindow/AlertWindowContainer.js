@@ -1,13 +1,9 @@
 import { connect } from "react-redux";
-import * as contactActions from "./../../redux/contactActions";
 import AlertWindow from "./AlertWindow";
+import * as contactSelector from "../../redux/contactSelector";
 
 const mapStateToProps = (state) => ({
-	alert: state.alert,
+	error: contactSelector.getError(state),
 });
 
-const mapDispatchToProps = (dispatch) => ({
-	switchAlert: (bool) => dispatch(contactActions.alertToggle(bool)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(AlertWindow);
+export default connect(mapStateToProps)(AlertWindow);

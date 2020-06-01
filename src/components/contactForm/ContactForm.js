@@ -6,8 +6,7 @@ import shortid from "shortid";
 //----------------------------
 import style from "./ContactForm.module.css";
 import InputTitle from "../inputTitle/InputTitle";
-import ErrorNotification from "../errorNotification/ErrorNotification";
-import AlertWindow from "../alertWindow/AlertWindow";
+import ErrorNotification from "./errorNotification/ErrorNotification";
 
 //---Доп функции валидатора---
 const rules = {
@@ -28,7 +27,6 @@ export default class ContactForm extends Component {
 		name: "",
 		number: "",
 		errors: null,
-		alertWindow: false,
 	};
 
 	addContact = (contact) => {
@@ -36,7 +34,9 @@ export default class ContactForm extends Component {
 		const findContact = this.props.contacts.find((i) => i.name === name);
 
 		if (findContact) {
-			this.setState({ alertWindow: true });
+			this.props.catchError({
+				message: `Contact ${this.state.name} already exists!`,
+			});
 		} else {
 			const contactToAdd = {
 				...contact,
@@ -86,8 +86,7 @@ export default class ContactForm extends Component {
 	};
 
 	render() {
-		const { name, number, errors, alertWindow } = this.state;
-
+		const { name, number, errors } = this.state;
 		return (
 			<>
 				<form onSubmit={this.handleSubmit} className={style.form}>
@@ -121,10 +120,6 @@ export default class ContactForm extends Component {
 						</button>
 					</div>
 				</form>
-				<AlertWindow
-					alert={alertWindow}
-					switchAlert={(e) => this.setState({ alertWindow: e })}
-				/>
 			</>
 		);
 	}
