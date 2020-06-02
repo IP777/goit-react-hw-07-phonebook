@@ -1,34 +1,39 @@
 {
   "contacts": [
     {
-      "id": "b1UmITWB4",
-      "name": "Maribel",
-      "number": "003-898-5696",
-      "newItem": true
+      "id": "w_pg-oOFq",
+      "name": "Dolores",
+      "number": "616-133-4106"
     },
     {
-      "id": "E3nG7YSSE",
-      "name": "Jared",
-      "number": "056-568-0866",
-      "newItem": true
-    },
-    {
-      "id": "qy4tMHnxo",
+      "id": "v2-f9tYBX",
       "name": "Zelda",
-      "number": "754-747-6317",
-      "newItem": true
+      "number": "540-207-7176"
     },
     {
-      "id": "-g6yEx4eW",
-      "name": "Sanford",
-      "number": "621-204-0068",
-      "newItem": true
+      "id": "TWXl_AfzB",
+      "name": "Taya",
+      "number": "029-107-1787"
     },
     {
-      "id": "L8jeFWd2-",
-      "name": "Tianna",
-      "number": "831-055-5655",
-      "newItem": true
+      "id": "qJerPgAlj",
+      "name": "Jeff",
+      "number": "781-289-8547"
+    },
+    {
+      "id": "KUK_NbQLY",
+      "name": "Antwon",
+      "number": "578-473-5540"
+    },
+    {
+      "id": "eDNqrqPFp",
+      "name": "Emily",
+      "number": "287-184-2768"
+    },
+    {
+      "id": "lC3swxmE4",
+      "name": "Madisyn",
+      "number": "599-513-7807"
     }
   ]
 }

@@ -4,6 +4,8 @@ export const getContact = (state) => state.contacts;
 
 export const getFilter = (state) => state.filter;
 
+export const getLoading = (state) => state.loading;
+
 export const getError = (state) => state.error;
 
 export const getFilteredContact = createSelector(

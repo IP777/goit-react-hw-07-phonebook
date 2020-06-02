@@ -6,8 +6,8 @@ const contactReducer = (state = [], { type, payload }) => {
 		case Type.FETCH_POSTS_SUCCESS:
 			return payload.posts;
 
-		case Type.ADD_CONTACT:
-			return [...state, payload];
+		case Type.ADD_CONTACT_SUCCESS:
+			return [...state, payload.obj];
 		case Type.REMOVE_CONTACT_SUCCESS:
 			return state.filter((contact) => contact.id !== payload.id);
 		default:
@@ -27,11 +27,14 @@ const filterReducer = (state = "", { type, payload }) => {
 const loadigReducer = (state = false, { type, payload }) => {
 	switch (type) {
 		case Type.FETCH_POSTS_START:
+		case Type.ADD_CONTACT_START:
 			return true;
 		case Type.FETCH_POSTS_SUCCESS:
 		case Type.FETCH_POSTS_ERROR:
 		case Type.REMOVE_CONTACT_SUCCESS:
 		case Type.REMOVE_CONTACT_ERROR:
+		case Type.ADD_CONTACT_SUCCESS:
+		case Type.ADD_CONTACT_ERROR:
 			return false;
 		default:
 			return state;

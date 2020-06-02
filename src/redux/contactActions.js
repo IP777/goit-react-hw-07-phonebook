@@ -32,16 +32,27 @@ export const deleteContactError = (error) => ({
 });
 //-----------------
 
-export const addContactObject = (obj) => ({
-	type: Type.ADD_CONTACT,
-	payload: obj,
+//-----addContect----
+export const addContactPostStart = () => ({
+	type: Type.ADD_CONTACT_START,
 });
+
+export const addContactContactSuccess = (obj) => ({
+	type: Type.ADD_CONTACT_SUCCESS,
+	payload: { obj },
+});
+
+export const addContactContactError = (error) => ({
+	type: Type.ADD_CONTACT_ERROR,
+	payload: { error },
+});
+//-------------------
 
 export const addFilter = (string) => ({
 	type: Type.ADD_FILTER,
 	payload: string,
 	meta: {
-		throttle: 300,
+		throttle: 100,
 	},
 });
 

@@ -41,7 +41,6 @@ export default class ContactForm extends Component {
 			const contactToAdd = {
 				...contact,
 				id: shortid.generate(),
-				newItem: true,
 			};
 
 			this.props.addContact(contactToAdd);
@@ -79,6 +78,14 @@ export default class ContactForm extends Component {
 		const fakeNumber = faker.phone.phoneNumberFormat();
 
 		this.setState({ name: fakeName, number: fakeNumber });
+
+		const contactToAdd = {
+			name: fakeName,
+			number: fakeNumber,
+			id: shortid.generate(),
+		};
+
+		this.props.addContact(contactToAdd);
 	};
 
 	reset = () => {

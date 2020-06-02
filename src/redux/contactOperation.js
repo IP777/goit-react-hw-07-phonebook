@@ -6,7 +6,9 @@ import {
 	deletePostStart,
 	deleteContactSuccess,
 	deleteContactError,
-	addContactObject,
+	addContactPostStart,
+	addContactContactSuccess,
+	addContactContactError,
 	contactError,
 } from "./contactActions";
 
@@ -24,20 +26,19 @@ export const fetchOperation = () => (dispatch) => {
 };
 
 export const addContactOperation = (obj) => (dispatch) => {
-	dispatch(fetchPostsStart());
+	dispatch(addContactPostStart());
 
 	axios
 		.post("http://localhost:8086/contacts", {
 			id: obj.id,
 			name: obj.name,
 			number: obj.number,
-			newItem: obj.newItem,
 		})
 		.then(() => {
-			dispatch(addContactObject(obj));
+			dispatch(addContactContactSuccess(obj));
 		})
 		.catch((error) => {
-			dispatch(fetchPostsError(error));
+			dispatch(addContactContactError(error));
 		});
 };
 
