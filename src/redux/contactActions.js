@@ -40,6 +40,9 @@ export const addContactObject = (obj) => ({
 export const addFilter = (string) => ({
 	type: Type.ADD_FILTER,
 	payload: string,
+	meta: {
+		throttle: 300,
+	},
 });
 
 export const contactError = (error) => ({

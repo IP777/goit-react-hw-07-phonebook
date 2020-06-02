@@ -12,7 +12,7 @@ export default class AlertWindow extends Component {
 	componentDidUpdate = (nextProps, nextState) => {
 		if (!!this.props.error) {
 			if (this.state.inError === nextState.inError) {
-				console.log(this.props.error.message);
+				//console.log(this.props.error.message);
 				this.setState({
 					inError: true,
 					message: this.props.error.message,

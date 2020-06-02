@@ -1,45 +1,33 @@
 {
   "contacts": [
     {
-      "id": "qA4Ev8Ihk",
-      "name": "Kyler",
-      "number": "831-354-7460",
+      "id": "b1UmITWB4",
+      "name": "Maribel",
+      "number": "003-898-5696",
       "newItem": true
     },
     {
-      "id": "MKfKRpe6o",
-      "name": "Anabelle",
-      "number": "068-834-0882",
+      "id": "E3nG7YSSE",
+      "name": "Jared",
+      "number": "056-568-0866",
       "newItem": true
     },
     {
-      "id": "PZElhiVdI",
-      "name": "Maybelle",
-      "number": "342-487-6893",
+      "id": "qy4tMHnxo",
+      "name": "Zelda",
+      "number": "754-747-6317",
       "newItem": true
     },
     {
-      "id": "bsHak7F4o",
-      "name": "Addison",
-      "number": "498-930-6877",
+      "id": "-g6yEx4eW",
+      "name": "Sanford",
+      "number": "621-204-0068",
       "newItem": true
     },
     {
-      "id": "W-v3sHGFb",
-      "name": "Jerod",
-      "number": "187-684-9998",
-      "newItem": true
-    },
-    {
-      "id": "-QfPTAnQn",
-      "name": "Misty",
-      "number": "933-996-1324",
-      "newItem": true
-    },
-    {
-      "id": "QW8ZXsHpM",
-      "name": "Bethany",
-      "number": "846-109-2862",
+      "id": "L8jeFWd2-",
+      "name": "Tianna",
+      "number": "831-055-5655",
       "newItem": true
     }
   ]
