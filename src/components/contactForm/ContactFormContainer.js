@@ -1,4 +1,5 @@
 import { connect } from "react-redux";
+import * as api from "../../redux/api";
 import * as contactOperation from "../../redux/contactOperation";
 import * as contactSelector from "../../redux/contactSelector";
 import ContactForm from "./ContactForm";
@@ -8,7 +9,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = {
-	addContact: contactOperation.addContactOperation,
+	addContact: api.addContactOperation,
 	catchError: contactOperation.catchError,
 };
 

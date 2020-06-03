@@ -1,21 +1,6 @@
 {
   "contacts": [
     {
-      "id": "w_pg-oOFq",
-      "name": "Dolores",
-      "number": "616-133-4106"
-    },
-    {
-      "id": "v2-f9tYBX",
-      "name": "Zelda",
-      "number": "540-207-7176"
-    },
-    {
-      "id": "TWXl_AfzB",
-      "name": "Taya",
-      "number": "029-107-1787"
-    },
-    {
       "id": "qJerPgAlj",
       "name": "Jeff",
       "number": "781-289-8547"
@@ -34,6 +19,16 @@
       "id": "lC3swxmE4",
       "name": "Madisyn",
       "number": "599-513-7807"
+    },
+    {
+      "id": "y47e1CK0k",
+      "name": "Leonardo",
+      "number": "908-175-2520"
+    },
+    {
+      "id": "e1OiKPUoc",
+      "name": "Sarai",
+      "number": "943-562-5448"
     }
   ]
 }

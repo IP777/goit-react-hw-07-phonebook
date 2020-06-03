@@ -1,11 +1,11 @@
 import { connect } from "react-redux";
 import { compose } from "redux";
-import * as contactOperation from "../../../redux/contactOperation";
+import * as api from "../../../redux/api";
 import ContactItem from "./ContactItem";
 //import withRenderLog from "../../hoc/withRenderLog";
 
 const mapDispatchToProps = {
-	onRemoveContact: contactOperation.deleteOperation,
+	onRemoveContact: api.deleteOperation,
 };
 
 const withConnect = connect(null, mapDispatchToProps);

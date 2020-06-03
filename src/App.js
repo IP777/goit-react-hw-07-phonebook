@@ -6,6 +6,7 @@ import PhonebookTitle from "./components/phonebookTitle/PhonebookTitle";
 import SearchFormContainer from "./components/searchForm/SearchFormContainer";
 import AlertWindowContainer from "./components/alertWindow/AlertWindowContainer";
 import CastomLoaderContainer from "./components/loader/CastomLoaderContainer";
+//console.log(process.env)
 
 const App = ({ fetchContacts }) => {
 	useEffect(() => {
