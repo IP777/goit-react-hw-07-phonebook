@@ -1,55 +1,10 @@
 import axios from "axios";
-import {
-	fetchPostsStart,
-	fetchPostsSuccess,
-	fetchPostsError,
-	deletePostStart,
-	deleteContactSuccess,
-	deleteContactError,
-	addContactPostStart,
-	addContactContactSuccess,
-	addContactContactError,
-} from "./contactActions";
 
-export const fetchOperation = () => (dispatch) => {
-	dispatch(fetchPostsStart());
+axios.defaults.baseURL = "http://localhost:8086/contacts";
+axios.defaults.headers.post["Content-Type"] = "application/json";
 
-	axios
-		.get("http://localhost:8086/contacts")
-		.then((resp) => {
-			dispatch(fetchPostsSuccess(resp.data));
-		})
-		.catch((error) => {
-			dispatch(fetchPostsError(error));
-		});
-};
+export const getAllContact = axios.get();
 
-export const addContactOperation = (obj) => (dispatch) => {
-	dispatch(addContactPostStart());
+export const postContact = (obj) => axios.post("", obj);
 
-	axios
-		.post("http://localhost:8086/contacts", {
-			id: obj.id,
-			name: obj.name,
-			number: obj.number,
-		})
-		.then(() => {
-			dispatch(addContactContactSuccess(obj));
-		})
-		.catch((error) => {
-			dispatch(addContactContactError(error));
-		});
-};
-
-export const deleteOperation = (id) => (dispatch) => {
-	dispatch(deletePostStart());
-
-	axios
-		.delete(`http://localhost:8086/contacts/${id}`)
-		.then(() => {
-			dispatch(deleteContactSuccess(id));
-		})
-		.catch((error) => {
-			dispatch(deleteContactError(error));
-		});
-};
+export const deleteContact = (id) => axios.delete(id);
