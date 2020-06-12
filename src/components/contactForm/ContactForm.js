@@ -34,7 +34,7 @@ export default class ContactForm extends Component {
 		const findContact = this.props.contacts.find((i) => i.name === name);
 
 		if (findContact) {
-			this.props.catchError({
+			this.props.contactError({
 				message: `Contact ${this.state.name} already exists!`,
 			});
 		} else {

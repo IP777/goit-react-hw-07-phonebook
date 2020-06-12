@@ -1,26 +1,6 @@
 {
   "contacts": [
     {
-      "name": "Amya",
-      "number": "642-313-5576",
-      "id": "j9d1h6sV3"
-    },
-    {
-      "name": "Margaret",
-      "number": "020-773-5339",
-      "id": "0XbDXAL01"
-    },
-    {
-      "name": "Isabell",
-      "number": "850-365-0089",
-      "id": "1CKgVJw4b"
-    },
-    {
-      "name": "Sadye",
-      "number": "916-069-4983",
-      "id": "Z1snULquf"
-    },
-    {
       "name": "Tessie",
       "number": "535-613-5108",
       "id": "0E-bFWID0c"
@@ -29,6 +9,26 @@
       "name": "Dejah",
       "number": "153-870-3435",
       "id": "O4Aj5kw6s"
+    },
+    {
+      "name": "Cody",
+      "number": "628-843-2919",
+      "id": "eCMHmyQ3F"
+    },
+    {
+      "name": "Hal",
+      "number": "780-297-8903",
+      "id": "BO0lzsdpj"
+    },
+    {
+      "name": "Amina",
+      "number": "888-171-2478",
+      "id": "ll1WJriTh"
+    },
+    {
+      "name": "Berniece",
+      "number": "566-124-3111",
+      "id": "HaQu0xqzA"
     }
   ]
 }

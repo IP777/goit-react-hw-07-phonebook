@@ -11,7 +11,7 @@ import CastomLoaderContainer from "./components/loader/CastomLoaderContainer";
 const App = ({ fetchContacts }) => {
 	useEffect(() => {
 		fetchContacts();
-	});
+	}, [fetchContacts]);
 
 	return (
 		<>
